@@ -24,8 +24,8 @@ export default {
   },
   data() {
     return {
-      title: 'edu-portal-vue',
-      logo: 'https://geekidea.oss-cn-chengdu.aliyuncs.com/spring-boot-plus/img/logo.png'
+      title: '电子同学录后台管理系统',
+      logo: 'https://classmate.obs.cn-north-4.myhuaweicloud.com/logo/logo.jpg'
     }
   }
 }

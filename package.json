@@ -1,7 +1,7 @@
 {
-  "name": "edu-portal",
+  "name": "classmate-backend",
   "version": "4.2.1",
-  "description": "基于vue-element-admin开发的，对应edu-portal接口的前端项目",
+  "description": "基于vue-element-admin开发的，对应classmate-backend接口的前端项目",
   "author": "geekidea@qq.com",
   "license": "Apache License",
   "scripts": {

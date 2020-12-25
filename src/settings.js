@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Spring Boot Plus Vue',
+  title: '电子同学录后台管理系统',
 
   /**
    * @type {boolean} true | false

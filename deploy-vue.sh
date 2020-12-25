@@ -15,11 +15,11 @@
 # limitations under the License.
 
 #======================================================================
-# 1. 下载或更新edu-portal-vue版本库
+# 1. 下载或更新classmate-backend版本库
 # 2. npm打包
 # 3. 将dist目录复制到Nginx静态目录中
 # 4. 备份dist目录
-# 5. 运行edu-portal-vue
+# 5. 运行classmate-backend
 # author: geekidea
 # date: 2020-03-06
 #======================================================================
@@ -27,11 +27,11 @@
 NOW=$(date --date='0 days ago' "+%Y-%m-%d-%H-%M-%S")
 echo "${NOW}"
 
-if [ ! -d "edu-portal-vue" ]; then
-  git clone https://gitee.com/geekidea/edu-portal-vue.git
+if [ ! -d "classmate-backend" ]; then
+  git clone https://gitee.com/geekidea/classmate-backend.git
 fi
 
-cd edu-portal-vue
+cd classmate-backend
 rm -rf package-lock.json
 
 git checkout master
@@ -43,15 +43,15 @@ npm install
 npx vue-cli-service build
 
 cd ..
-if [ ! -d "edu-portal-vue-back" ]; then
-  mkdir edu-portal-vue-back
+if [ ! -d "classmate-backend-back" ]; then
+  mkdir classmate-backend-back
 fi
 
-cp -r -f edu-portal-vue/dist edu-portal-vue-back/edu-portal-vue-back-"${NOW}"
-echo "back edu-portal-vue success"
+cp -r -f classmate-backend/dist classmate-backend-back/classmate-backend-back-"${NOW}"
+echo "back classmate-backend success"
 
 rm -rf /home/www/vue
 nginx -s reload
-mv edu-portal-vue/dist /home/www/vue
+mv classmate-backend/dist /home/www/vue
 nginx -s reload
-echo "Deploy edu-portal-vue success"
+echo "Deploy classmate-backend success"

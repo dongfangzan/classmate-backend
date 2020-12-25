@@ -80,44 +80,26 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/documentation',
+    path: '/space',
     component: Layout,
     children: [
       {
         path: 'index',
-        component: () => import('@/views/documentation/index'),
-        name: 'Documentation',
-        meta: { title: '文档', icon: 'documentation', affix: true }
+        component: () => import('@/views/space/index'),
+        name: 'Space',
+        meta: { title: '空间管理', icon: 'space', affix: true }
       }
     ]
   },
   {
-    path: 'swagger',
+    path: '/wechat',
     component: Layout,
     children: [
       {
-        path: 'http://47.105.159.10:8888/api/swagger-ui.html',
-        meta: { title: 'SwaggerUI', icon: 'link' }
-      }
-    ]
-  },
-  {
-    path: 'knife4j',
-    component: Layout,
-    children: [
-      {
-        path: 'http://47.105.159.10:8888/api/doc.html',
-        meta: { title: 'SwaggerUI', icon: 'link' }
-      }
-    ]
-  },
-  {
-    path: 'spring-boot-admin',
-    component: Layout,
-    children: [
-      {
-        path: 'http://47.105.159.10:8000/instances/58c15acdd00c/details',
-        meta: { title: 'SpringBootAdmin', icon: 'link' }
+        path: 'wechat',
+        component: () => import('@/views/space/index'),
+        name: 'Wechat',
+        meta: { title: '微信用户管理', icon: 'space', affix: true }
       }
     ]
   },
